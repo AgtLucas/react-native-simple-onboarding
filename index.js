@@ -82,10 +82,10 @@ export default class Onboarding extends Component {
 
 Onboarding.propTypes = {
   pages: PropTypes.arrayOf(PropTypes.shape({
-    backgroundColor: PropTypes.string.isRequired,
-    image: PropTypes.element.isRequired,
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
+    backgroundColor: PropTypes.string,
+    image: PropTypes.element,
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
   })).isRequired,
   bottomOverlay: PropTypes.bool,
   showSkip: PropTypes.bool,
