@@ -52,12 +52,13 @@ export default class Onboarding extends Component {
           onScroll={this.updatePosition}
           scrollEventThrottle={100}
         >
-          {pages.map(({ image, title, subtitle }, idx) => (
+          {pages.map(({ image, title, icon, subtitle }, idx) => (
             <PageData
               key={idx}
               isLight={isLight}
               image={image}
               title={title}
+              icon={icon}
               subtitle={subtitle}
               width={width}
               height={height}
@@ -84,7 +85,8 @@ Onboarding.propTypes = {
   pages: PropTypes.arrayOf(PropTypes.shape({
     backgroundColor: PropTypes.string,
     image: PropTypes.element,
-    title: PropTypes.element,
+    title: PropTypes.string,
+    icon: PropTypes.element,
     subtitle: PropTypes.string,
   })).isRequired,
   bottomOverlay: PropTypes.bool,

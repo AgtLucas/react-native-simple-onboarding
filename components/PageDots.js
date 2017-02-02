@@ -21,7 +21,6 @@ const PageDots = ({ isLight, pages, currentPage }) => (
     {Array.from(new Array(pages), (x, i) => i).map(page => (
       <PageDot key={page} selected={page === currentPage} isLight={isLight} />
     ))}
-    <PageCheckmark style={{ color: isLight ? 'rgba(0, 0, 0, 0.3)' : 'rgba(255, 255, 255, 0.5)' }} />
   </View>
 );
 
