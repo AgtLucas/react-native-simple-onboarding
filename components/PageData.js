@@ -21,12 +21,14 @@ const PageData = ({ isLight, image, title, subtitle, ...rest }) => (
       <View style={styles.image}>
         {image}
       </View>
-      <Text style={{ ...styles.title, ...(isLight ? styles.titleLight : {}) }}>
-        {title}
-      </Text>
-      <Text style={{ ...styles.subtitle, ...(isLight ? styles.subtitleLight : {}) }}>
-        {subtitle}
-      </Text>
+      <View style={styles.textContainer}>
+        <Text style={{ ...styles.title, ...(isLight ? styles.titleLight : {}) }}>
+          {title}
+        </Text>
+        <Text style={{ ...styles.subtitle, ...(isLight ? styles.subtitleLight : {}) }}>
+          {subtitle}
+        </Text>
+      </View>
     </PageContent>
   </Page>
 );
@@ -37,6 +39,9 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  textContainer: {
+    backgroundColor: '#FFF',
   },
   image: {
     flex: 0,
