@@ -84,7 +84,7 @@ Onboarding.propTypes = {
   pages: PropTypes.arrayOf(PropTypes.shape({
     backgroundColor: PropTypes.string,
     image: PropTypes.element,
-    title: PropTypes.string,
+    title: PropTypes.element,
     subtitle: PropTypes.string,
   })).isRequired,
   bottomOverlay: PropTypes.bool,

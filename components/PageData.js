@@ -15,16 +15,16 @@ const PageContent = ({ children }) => (
   </View>
 );
 
-const PageData = ({ isLight, image, title, subtitle, ...rest }) => (
+const PageData = ({ isLight, image, title, subtitle, width, ...rest }) => (
   <Page {...rest}>
     <PageContent>
       <View style={styles.image}>
         {image}
       </View>
-      <View style={styles.textContainer}>
-        <Text style={{ ...styles.title, ...(isLight ? styles.titleLight : {}) }}>
+      <View style={[styles.textContainer, { width }]}>
+        <View style={styles.headerContainer}>
           {title}
-        </Text>
+        </View>
         <Text style={{ ...styles.subtitle, ...(isLight ? styles.subtitleLight : {}) }}>
           {subtitle}
         </Text>
@@ -42,29 +42,13 @@ const styles = {
   },
   textContainer: {
     backgroundColor: '#FFF',
+    height: 200
   },
   image: {
-    flex: 0,
+    flex: 1,
     paddingBottom: 60,
     alignItems: 'center',
-  },
-  title: {
-    textAlign: 'center',
-    fontSize: 26,
-    color: '#fff',
-    paddingBottom: 15,
-  },
-  titleLight: {
-    color: '#000',
-  },
-  subtitle: {
-    textAlign: 'center',
-    fontSize: 16,
-    color: 'rgba(255, 255, 255, 0.7)',
-  },
-  subtitleLight: {
-    color: 'rgba(0, 0, 0, 0.7)',
-  },
+  }
 };
 
 export default PageData;

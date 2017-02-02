@@ -47,13 +47,14 @@ const Paginator = ({ isLight, overlay, showSkip, showNext, showDone, pages, curr
 const styles = {
   container: {
     height: 60,
+    backgroundColor: '#FFF',
     paddingHorizontal: 0,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
   containerOverlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+    backgroundColor: '#FFF',
   },
   buttonLeft: {
     width: 70,
